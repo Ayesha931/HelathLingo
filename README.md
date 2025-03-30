@@ -81,6 +81,3 @@ health-lingo/
 - API keys are securely stored in environment variables.
 - CORS restrictions are applied using `Flask-CORS`.
 - Input validation ensures secure API requests.
-
-## License
-This project is open-source and available under the MIT License.
