@@ -2,7 +2,8 @@
 
 HealthLingo is a web-based AI-powered medical speech translation tool. It enables users to transcribe, enhance, and translate medical speech in real-time using AI models.
 
-## Code Documentation
+
+## Live Link: [HealthLingo on Vercel](https://lingohealth.vercel.app/)
 
 ### Project Structure
 ```
