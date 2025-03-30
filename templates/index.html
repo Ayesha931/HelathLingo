@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthLingo - AI Medical Translator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white shadow-lg rounded-xl p-6 w-full max-w-md">
+        <h1 class="text-2xl font-bold text-center text-blue-600">HealthLingo</h1>
+        <p class="text-gray-600 text-center mb-4">AI-Powered Medical Speech Translation</p>
+
+        <!-- Input Language Selection -->
+        <label class="block font-semibold">Select Input Language:</label>
+        <select id="inputLanguageSelect" class="w-full p-2 border rounded-md mb-2">
+            <option value="en-US">English</option>
+            <option value="es-ES">Spanish</option>
+            <option value="fr-FR">French</option>
+            <option value="de-DE">German</option>
+            <option value="ar-SA">Arabic</option>
+            <option value="zh-CN">Chinese</option>
+        </select>
+
+        <!-- Start Speech Recognition -->
+        <button onclick="startRecognition()" class="w-full bg-blue-500 text-white py-2 rounded-md mb-2 hover:bg-blue-600">🎙️ Start Speaking</button>
+
+        <!-- Transcriptions -->
+        <label class="block font-semibold">Transcription (Original Speech):</label>
+        <textarea id="originalText" class="w-full p-2 border rounded-md mb-2 h-20" readonly></textarea>
+
+        <label class="block font-semibold">Enhanced Transcription:</label>
+        <textarea id="enhancedText" class="w-full p-2 border rounded-md mb-2 h-20" readonly></textarea>
+
+        <!-- Output Language Selection -->
+        <label class="block font-semibold">Select Output Language:</label>
+        <select id="outputLanguageSelect" class="w-full p-2 border rounded-md mb-2">
+            <option value="en">English</option>
+            <option value="es">Spanish</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+            <option value="ar">Arabic</option>
+            <option value="zh">Chinese</option>
+        </select>
+
+        <label class="block font-semibold">Translated Text:</label>
+        <textarea id="translatedText" class="w-full p-2 border rounded-md mb-2 h-20" readonly></textarea>
+
+        <!-- Speak Button -->
+        <button onclick="speakText()" class="w-full bg-green-500 text-white py-2 rounded-md hover:bg-green-600">🔊 Speak</button>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
